@@ -1,0 +1,19 @@
+.app {   
+  width: 600px;
+  min-height: 500px;
+  background: rgb(235, 235, 235); 
+  backdrop-filter: blur(12rem);
+  border-radius: 10px;
+  padding: 1rem; margin-top: 1rem;
+  &-title {
+    padding: .2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }  
+}
+
+@media screen and (max-width: 600px) {
+  .app { 
+    width: 100%;
+  }
+}
