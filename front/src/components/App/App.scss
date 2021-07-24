@@ -1,7 +1,7 @@
 .app {   
   width: 600px;
   min-height: 500px;
-  background: rgb(235, 235, 235); 
+  background:#fbf1ff; 
   backdrop-filter: blur(12rem);
   border-radius: 10px;
   padding: 1rem; margin-top: 1rem;
@@ -10,6 +10,13 @@
     text-align: center;
     text-transform: uppercase;
   }  
+  &-p {
+    text-align: center;
+    margin: 1.2rem 0;
+  }
+  &-span {
+    color: red;
+  }
 }
 
 @media screen and (max-width: 600px) {

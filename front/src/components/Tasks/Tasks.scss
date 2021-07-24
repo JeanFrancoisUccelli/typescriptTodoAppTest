@@ -1,5 +1,5 @@
 .tasks {
-  background-color: rgb(230, 230, 230);
+  background-color:#fbf1ff;
   border-radius: 10px;
 }
 .task {
@@ -14,7 +14,7 @@
     box-shadow: 1px 0 5px #ccc;
   }
   &--completed {
-    background-color: teal;
+    background-color: #ebb1fe;
   }
   &-label {
     width: 70%;

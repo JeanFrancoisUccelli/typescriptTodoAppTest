@@ -33,14 +33,14 @@ const App: React.FC = () => {
   
   return (
     <div className="app">
-      <h1 className="app-title">todolist</h1>
+      <h1 className="app-title">ma `to do` liste</h1>
       <section className="app-container">
         <Form 
           value={value}
           handleValue={setValue}
           getDataFromAPI={getDataFromAPI}
         />
-        <p>You have {tasks.length} To Do item(s)</p>
+        <p className="app-p">J'ai <span className="app-span">{tasks.length}</span> élément(s) dans ma liste</p>
         <Tasks
           tasks={tasks}
           getDataFromAPI={getDataFromAPI}
