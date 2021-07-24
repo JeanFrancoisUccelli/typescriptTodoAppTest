@@ -98,64 +98,66 @@ const Tasks: React.FC<TasksProps> = ({ tasks, getDataFromAPI }) => {
   };
 
   return (
-    <>
-      <p>seulement les 'à faire'</p>
-      <input type="checkbox" onChange={()=>{setShowOnlyCompletedTask(!showOnlyCompletedTask)}} />
+    <div>
+       <div className="check-completed-task">
+    <label className="tgl-btn" htmlFor = "cb1">Tâches à faire seulement</label>
+    <input className="cb1.tgl.tgl-light" type = "checkbox" onChange={()=>setShowOnlyCompletedTask(!showOnlyCompletedTask)} />
+    </div>
       <form onSubmit={submitUpdateTask}>
         <ul className="tasks">
-            {showOnlyCompletedTask ? 
-            tasks.filter((task) =>!task.completed).map((task) => (
-            <li
-              key={task.id}
-              className={task.completed ? "task task--completed" : "task"}
-            >
-              {editTaskId === task.id ? (
-                <input
-                  className="task-input"
-                  type="text"
-                  id={task.id}
-                  placeholder="mode édition"
-                  value={valueTask}
-                  onChange={updateTask}
-                />
-              ) : (
-                <label
-                  className={
-                    task.completed
-                      ? "task-label task-label--completed"
-                      : "task-label"
-                  }
-                  id={task.id}
-                  onClick={displayInput}
-                >
-                  {task.content}
-                </label>
-              )}
-              <div className="task-containerBtn">
-                <input
-                  type="checkbox"
-                  id={task.id}
-                  defaultChecked={task.completed}
-                  onChange={completedTask}
-                />
-                <i
-                  id={task.id}
-                  className="fas fa-trash button button-trash"
-                  onClick={removeTask}
-                />
-                <i
-                  id={task.id}
-                  className="fa fa-pencil"
-                  aria-hidden="true"
-                  onClick={() => setEditTaskId(task.id)}
-                />
-              </div>
-            </li>
-          ))
-        : <p>toto</p>}
+          {tasks
+            .filter((task) => (showOnlyCompletedTask ? !task.completed : task))
+            .map((task) => (
+              <li
+                key={task.id}
+                className={task.completed ? "task task--completed" : "task"}
+              >
+                {editTaskId === task.id ? (
+                  <input
+                    className="task-input"
+                    type="text"
+                    id={task.id}
+                    placeholder="mode édition"
+                    value={valueTask}
+                    onChange={updateTask}
+                  />
+                ) : (
+                  <label
+                    className={
+                      task.completed
+                        ? "task-label task-label--completed"
+                        : "task-label"
+                    }
+                    id={task.id}
+                    onClick={displayInput}
+                  >
+                    {task.content}
+                  </label>
+                )}
+                <div className="task-containerBtn">
+                  <input
+                    type="checkbox"
+                    id={task.id}
+                    defaultChecked={task.completed}
+                    onChange={completedTask}
+                  />
+                  <i
+                    id={task.id}
+                    className="fas fa-trash button button-trash"
+                    onClick={removeTask}
+                  />
+                  <i
+                    id={task.id}
+                    className="fas fa-pencil-alt"
+                    aria-hidden="true"
+                    onClick={() => setEditTaskId(task.id)}
+                  />
+                </div>
+              </li>
+            ))}
         </ul>
       </form>
-    </>
+    </div>
   );
 };
 

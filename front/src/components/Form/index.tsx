@@ -53,7 +53,7 @@ const Form: React.FC<FormProps> = ({ value, handleValue, getDataFromAPI }) => {
         onChange={(event) => {
           handleValue(event.target.value);
         }}
-        placeholder="Indiquer une nouvelle tache ici"
+        placeholder="Indiquer une nouvelle tâche ici"
       />
       <div className="form-container-btn-plus">
         <div className="form-btn-plus">
