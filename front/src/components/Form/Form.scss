@@ -4,9 +4,9 @@
   justify-content: center;
   align-items: center;
   &-input {
-    width: 80%;
+    width: 70%;
     padding: .7rem;
-    margin: .3rem 0;
+    margin: .3rem;
     font-size: 1.2em;
     border: none;
     border-radius: 10px;
@@ -22,8 +22,18 @@
     background-color: white;
     border-radius: 50%;
     width: 2.5rem;
-    margin-left: 15px;
+    & i {
+      display: block;
+    }
+    & .btn-plus-text {
+      display: none;
+    }
+    & :hover {
+      i {display: none}
+      .btn-plus-text {display: inline-block; font-weight: bold; font-size: 2rem;}
+    }
   }
+  
   &-btn-plus {
     font-size: 2.2em;
     color: #42f5b9;
