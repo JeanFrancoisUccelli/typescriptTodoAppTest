@@ -57,7 +57,7 @@ const Form: React.FC<FormProps> = ({ value, handleValue, getDataFromAPI }) => {
       />
       <div className="form-container-btn-plus">
         <div className="form-btn-plus">
-          <i className="fa fa-plus" aria-hidden="true"></i>
+          <i className="fa fa-plus" aria-hidden="true" onClick={submitTask} />
         </div>
       </div>
     </form>
