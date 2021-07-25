@@ -5,14 +5,14 @@
   align-items: center;
   &-input {
     width: 70%;
-    padding: .7rem;
-    margin: .3rem;
+    padding: 0.7rem;
+    margin: 0.3rem;
     font-size: 1.2em;
     border: none;
     border-radius: 10px;
     &::placeholder {
-        font-size: 1.2rem;
-        color: rgb(133, 133, 133);
+      font-size: 1.2rem;
+      color: rgb(133, 133, 133);
     }
   }
   &-container-btn-plus {
@@ -29,11 +29,17 @@
       display: none;
     }
     & :hover {
-      i {display: none}
-      .btn-plus-text {display: inline-block; font-weight: bold; font-size: 2rem;}
+      i {
+        display: none;
+      }
+      .btn-plus-text {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 2rem;
+      }
     }
   }
-  
+
   &-btn-plus {
     font-size: 2.2em;
     color: #42f5b9;

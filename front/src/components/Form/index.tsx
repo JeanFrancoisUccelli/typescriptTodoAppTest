@@ -58,7 +58,9 @@ const Form: React.FC<FormProps> = ({ value, handleValue, getDataFromAPI }) => {
       <div className="form-container-btn-plus">
         <div className="form-btn-plus">
           <i className="fa fa-plus" aria-hidden="true" />
-          <span className="btn-plus-text" onClick={submitTask}><small>OK</small></span>
+          <span className="btn-plus-text" onClick={submitTask}>
+            <small>OK</small>
+          </span>
         </div>
       </div>
     </form>

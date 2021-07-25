@@ -99,10 +99,16 @@ const Tasks: React.FC<TasksProps> = ({ tasks, getDataFromAPI }) => {
 
   return (
     <div>
-       <div className="check-completed-task">
-    <label className="tgl-btn" htmlFor = "cb1">Tâches à faire seulement</label>
-    <input className="cb1.tgl.tgl-light" type = "checkbox" onChange={()=>setShowOnlyCompletedTask(!showOnlyCompletedTask)} />
-    </div>
+      <div className="check-completed-task">
+        <label className="tgl-btn" htmlFor="cb1">
+          Tâches à faire seulement
+        </label>
+        <input
+          className="cb1.tgl.tgl-light"
+          type="checkbox"
+          onChange={() => setShowOnlyCompletedTask(!showOnlyCompletedTask)}
+        />
+      </div>
       <form onSubmit={submitUpdateTask}>
         <ul className="tasks">
           {tasks
