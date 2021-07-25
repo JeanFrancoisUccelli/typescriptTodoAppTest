@@ -75,7 +75,10 @@
 
 
 .check-completed-task {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
